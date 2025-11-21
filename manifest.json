@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Peach Translator",
+    "version": "1.0",
+    "description": "Traduce palabras al español al pasar el mouse",
+    "permissions": [],
+    "host_permissions": [
+        "https://translate.argosopentech.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        },
+        "default_title": "Peach Translator",
+        "default_popup": "popup.html"
+    }
+}
